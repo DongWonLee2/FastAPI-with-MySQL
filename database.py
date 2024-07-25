@@ -19,7 +19,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 # 데이터베이스 URL을 정의합니다. 여기에는 데이터베이스 타입, 사용자명, 비밀번호, 호스트, 포트, 데이터베이스 이름이 포함되어야 합니다.
-URL_DATABASE = 'mysql+pymysql://root:07069@localhost:3306/blogapplication'  # 실제 데이터베이스 URL로 대체해야 합니다.
+URL_DATABASE = 'mysql+pymysql://{user}:{password}@localhost:{host_num}/{dbname}'  # 실제 데이터베이스 URL로 대체해야 합니다.
 
 # 데이터베이스와 상호작용(연결)하기 위한 엔진을 생성합니다.
 engine = create_engine(URL_DATABASE)
